@@ -58,6 +58,7 @@ RUN apk update \
 # Build docker image và đẩy lên Docker hub
 ```
 docker build -t coolalpine .
+docker history coolalpine:latest
 docker login
 docker tag coolalpine:latest minhcuong/coolalpine
 docker push minhcuong/coolalpine
