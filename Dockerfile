@@ -30,3 +30,7 @@ RUN apk update \
 && fish ~/omf.fish --noninteractive --path=~/.local/share/omf --config=~/.config/omf \
 && echo 'omf install budspencer;fish_update_completions;set -U budspencer_nogreeting;rm ~/omf.fish;rm ~/.config/fish/config.fish' > ~/.config/fish/config.fish \
 && fish
+COPY start.sh /
+COPY start.fish /
+
+ENTRYPOINT ["fish", "start.fish"]
